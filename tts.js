@@ -3,7 +3,7 @@ const { serviceTTS } = require('./serviceTTS');
 module.exports = async (request, response) => {
   console.debug(`请求正文：${request.body}`)
   let voiceName = request.query["voiceName"] ?? "zh-CN-XiaoxiaoNeural"
-  let style = request.query["style"] ?? "General"
+  let style = request.query["voiceStyle"] ?? "General"
   let role = request.query["role"] ?? ""
   let rate = request.query["rate"] ?? "0"
   let styledegree = request.query["styledegree"] ?? "1.5"
